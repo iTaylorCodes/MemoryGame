@@ -86,6 +86,7 @@ function handleCardClick(event) {
 		matchCheck();
 	}
 
+	// Updates localStorage upon completing game
 	if (document.getElementsByClassName('done').length == 16) {
 		if (localStorage.lowscore) {
 			localStorage.lowscore = score < localStorage.lowscore ? score : localStorage.lowscore;
@@ -118,7 +119,7 @@ function matchCheck() {
 	}
 }
 
-// when the DOM loads
+// When the game starts
 startButton.addEventListener('click', (e) => {
 	gameContainer.innerHTML = '';
 	let shuffledColors = shuffle();
